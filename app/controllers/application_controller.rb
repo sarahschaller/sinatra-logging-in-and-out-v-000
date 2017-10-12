@@ -22,7 +22,7 @@ class ApplicationController < Sinatra::Base
 
   get '/account' do
     if self.is_logged_in(session)
-      
+
     end
     erb :error
   end
