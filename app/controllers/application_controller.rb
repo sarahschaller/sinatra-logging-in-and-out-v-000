@@ -20,7 +20,6 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
-    @current_user = User.current_user(session)
 
   end
 
