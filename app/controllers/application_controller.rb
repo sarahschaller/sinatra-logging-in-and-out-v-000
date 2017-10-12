@@ -1,3 +1,4 @@
+require 'pry'
 require_relative '../../config/environment'
 class ApplicationController < Sinatra::Base
   configure do
@@ -21,6 +22,7 @@ class ApplicationController < Sinatra::Base
 
   get '/account' do
     if self.is_logged_in(session)
+      binding.pry
       self.current_user(session)
     end
     erb :error
